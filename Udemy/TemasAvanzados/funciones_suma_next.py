@@ -13,5 +13,21 @@ resultado = sum(lista, 20)
 print(f"Resultado en la suma con valor inicial 20: {resultado}")
 
 
+#****Funcion next()*****
+# next(iterador[, valor_predeterminado])
+
+#Transformamos a nuestra listas a iterador para poder recorrerla con la funcion iter()
+iterador = iter(lista)
+
+# Con la funcion de next() obtenemos el porximo elemento del iterador 
+
+
+print(f'El sigiente elemento del iterable es: {next(iterador)}')
+print(f'El sigiente elemento del iterable es: {next(iterador)}')
+print(f'El sigiente elemento del iterable es: {next(iterador)}')
+print(f'El sigiente elemento del iterable es: {next(iterador)}')
+print(f'El sigiente elemento del iterable es: {next(iterador)}')
+#Siempre llarmaa al siguiente elemento , siempre y cuando no llamemamos mas de lo que la lista tiene.
+
 
 
