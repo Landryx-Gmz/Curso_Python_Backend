@@ -9,6 +9,9 @@ def dividir(numerador, denominador):
         print(f'Resultado de la división es: {resultado}')
     except Exception as e:# Capturando errores generales
         print(f'Ocurrio un error: {e}')
+    else:
+        print(f'No ocurrio ningun error')
+
     finally: #Siempre se va a ejecutar
         print("Terminamos de procesar la exepcion\n")
 
