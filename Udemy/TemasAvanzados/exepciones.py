@@ -2,6 +2,9 @@
 
 def dividir(numerador, denominador):
     try:
+        # Revisamos si el denominador es igual a 0
+        if denominador == 0:
+            raise Exception('El denominador es igual a 0')
         resultado = numerador/denominador
         print(f'Resultado de la división es: {resultado}')
     except Exception as e:# Capturando errores generales
