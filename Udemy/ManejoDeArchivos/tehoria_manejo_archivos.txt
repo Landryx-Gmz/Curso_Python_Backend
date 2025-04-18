@@ -1,0 +1,18 @@
+----------Funcion open()-----------------
+
+* Esta funcion es una de las pricipales al trabajar archivos en python
+
+# Sintaxis:
+    open(nombre_archivo, modo)
+
+MODOS:
+    r -> Read
+    a -> Append
+    w -> Write
+    x -> Create
+
+OTROS MODOS:
+    r+ -> Lectura y esctritura
+    w+ -> Lectura y esctritura . Si el archivo existe , se sobreescribe sino se crea uno nuevo
+    a+ -> Lectura y agregrar. Si el archivo no esxiste , se crea para escritura
+
