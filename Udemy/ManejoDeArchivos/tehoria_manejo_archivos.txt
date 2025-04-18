@@ -18,9 +18,9 @@ OTROS MODOS:
 
 
 
-    
+
 ********************* BLOQUE with ********************
-se utiliza para hacer que un archivo tenga apertura y cierre sin utilizar .open() ni .close())
+se utiliza para cuando creamos y operamos en un archivo tenga apertura y cierre sin utilizar .open() ni .close())
 
 # Sintaxis:
 #   with open(nombre del archivo, modo) as variableAuxiliar:
