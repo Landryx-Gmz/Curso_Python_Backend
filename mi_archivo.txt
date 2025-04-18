@@ -1,2 +1,3 @@
 Hola como estas
 estoy agregando informacion al archivo
+con el bloque with

@@ -16,3 +16,25 @@ OTROS MODOS:
     w+ -> Lectura y esctritura . Si el archivo existe , se sobreescribe sino se crea uno nuevo
     a+ -> Lectura y agregrar. Si el archivo no esxiste , se crea para escritura
 
+
+
+    
+********************* BLOQUE with ********************
+se utiliza para hacer que un archivo tenga apertura y cierre sin utilizar .open() ni .close())
+
+# Sintaxis:
+#   with open(nombre del archivo, modo) as variableAuxiliar:
+#       bloque con sangria de lo que queramos operar sin open() ni close()
+
+Ejemplo:
+with open(nombre_archivo, 'w') as archivo:
+    archivo.write('Hola como estas\n')
+    archivo.write("estoy agregando informacion al archivo\n")
+    archivo.write("con el bloque with\n")
+
+# Ejemplo sin with:
+archivo = open(nombre_archivo, 'w')
+# Agregamos informacion con .write()
+archivo.write('Hola como estas\n')
+archivo.write("estoy agregando informacion al archivo\n")
+#archivo.close()#cerramos el flujo
