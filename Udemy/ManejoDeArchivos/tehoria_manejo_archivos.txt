@@ -38,3 +38,21 @@ archivo = open(nombre_archivo, 'w')
 archivo.write('Hola como estas\n')
 archivo.write("estoy agregando informacion al archivo\n")
 #archivo.close()#cerramos el flujo
+
+
+
+*****************ARCHIVOS MODO EXCLUSIVO*************************
+Sirve para porder crear archivos siempre que no existan y si existen no poder modificarlos 
+su sintaxis va a compañado de try: exept con un bloque with
+
+Ejemplo:
+
+nombre_archivo = 'mi_archivo.txt'
+try:
+    with open(nombre_archivo, 'x') as archivo:
+        archivo.write('Escritura en modo exclusivo\n')
+        archivo.write('Espero te sea util\n')
+    print('Se a creado el archvio {nombre_archivo}')
+except FileExistsError as e:
+    print(f'El archivo {nombre_archivo} ya existe')
+    print(f'Detalle del error: {e}')
