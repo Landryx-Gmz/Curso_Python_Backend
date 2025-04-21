@@ -67,6 +67,7 @@ class MaquinaSnacks:
         nombre = input('Nombre del snack: ')
         precio = float(input('Precio del snack: '))
         nuevo_snack = Snack(nombre, precio)
+        id_snack = self.servicio_snacks.generar_id_unico()
         self.servicio_snacks.agregar_snack(nuevo_snack)
         print('Snack agregado correctamente.')
 
