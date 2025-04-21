@@ -37,8 +37,9 @@ class ServiciosSnacks:
         try:
             with open(self.NOMBRE_ARCHIVO, 'r') as archivo:
                 for linea in archivo:
-                    id_snack, nombre, precio = linea.strip().split()
+                    id_snack, nombre, precio = linea.strip().split(',')
                     snack = Snack(nombre, float(precio))
+                    snack.id_snack = int(id_snack)
                     snacks.append(snack)
         except Exception as e:
             print(f'Error al leer archivo de snacks: {e}')

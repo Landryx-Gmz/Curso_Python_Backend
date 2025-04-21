@@ -1,6 +1,5 @@
-from Udemy.ManejoDeArchivos.Practica.maquina_sancks_proyecto.servicio_snacks import ServiciosSnacks
-from Udemy.ManejoDeArchivos.Practica.maquina_sancks_proyecto.snack import Snack
-
+from servicio_snacks import ServiciosSnacks
+from snack import Snack
 
 class MaquinaSnacks:
     def __init__(self):
@@ -14,16 +13,16 @@ class MaquinaSnacks:
         while not salir:
             try:
                 opcion = self.mostrar_menu()
-                salir = self.ejecutar_opcion()
+                salir = self.ejecutar_opcion(opcion)
             except Exception as e:
                 print(f'Ocurrio un error: {e}')
 
     def mostrar_menu(self):
-        print(f'''
+        print(f'''\nMenu:
         1. Comprar snack
-        2. Mostrar snack
+        2. Mostrar ticket
         3. Agregar Nuevo Snack al Inventario
-        4. Inventario Snacks
+        4. Mostrar Inventario Snacks
         5. Salir
         ''')
         return int(input("Elige una opción: "))
@@ -45,7 +44,7 @@ class MaquinaSnacks:
         return False
 
     def comprar_snack(self):
-        id_snack = int(input('Que snack quieres comprar (id)?'))
+        id_snack = int(input('Que snack quieres comprar (id)?: '))
         snacks = self.servicio_snacks.get_snacks()
         snack = next((snack for snack in snacks if snack.id_snack == id_snack), None)
         if snack:
