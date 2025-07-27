@@ -8,7 +8,7 @@ print(palabras)
 # ***Buscar y reemplazar***
 
 # Buscar con .find()
-posicion = cadena.find('Mundo') # devolver el valor de 5
+posicion = cadena.find('Mundo')  # devolver el valor de 5
 print(f'Posicion de la cadena Mundo: {posicion}')
 
 # Reemplazar con .replace()
@@ -28,6 +28,6 @@ print(f'La cadena de caracteres limpia es: {cadena_limpia}')
 
 # Eliminacion por parametro dentro de strip
 cadena = '....Hola Mundo ........'
-cadena_limpia = cadena.strip('.')#dentro de () indicamos los caracteres a eliminar
+cadena_limpia = cadena.strip('.')  # dentro de () indicamos los caracteres a eliminar
 print(f'cadena actual: {cadena}')
 print(f'cadena limpia de caracteres especificos es: {cadena_limpia}')
