@@ -1,4 +1,6 @@
 # Funciones Lambda
+from functools import reduce
+
 
 # Funcion cuadrado sin usar lambda
 def cuadrado(x):
@@ -25,3 +27,8 @@ print(f'Resultado de usar map y lambda: {cuadrados}')
 # Con fliter y lambda
 pares = list(filter(lambda x: x % 2 == 0, numeros))
 print(f'Resultado de usar filter para filtrar numero pars: {pares}')
+
+# reduce y map
+
+suma_acumulativa = reduce(lambda x, y: x + y, numeros)
+print(f'Suma acumulativa aplicando reduce: {suma_acumulativa}')
