@@ -4,7 +4,7 @@ try:
     with open(nombre_archivo, 'x') as archivo:
         archivo.write('Escritura en modo exclusivo\n')
         archivo.write('Espero te sea util\n')
-    print('Se a creado el archvio {nombre_archivo}')
+    print(f'Se a creado el archvio {nombre_archivo}')
 except FileExistsError as e:
     print(f'El archivo {nombre_archivo} ya existe')
     print(f'Detalle del error: {e}')
