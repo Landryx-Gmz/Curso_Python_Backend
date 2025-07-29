@@ -4,15 +4,14 @@ nombre_archivo = 'mi_archivo.txt'
 
 # Leer archivo utilizando el metodo readlineas
 
-with open(nombre_archivo, 'r') as  archivo:
+with open(nombre_archivo, 'r') as archivo:
     # Leere todas las lineas del archivo
-    #print(archivo.readlines())
+    # print(archivo.readlines())
 
-# Iterar lineas del archivo
+    # Iterar lineas del archivo
     lineas = archivo.readlines()
     for linea in lineas:
-        print(linea.strip())
-
+        print(linea.strip())  # metodo .strip() quita espacios , saltos de linea,etc
 
 # Leer todo el contenido usando el metodo read
 
