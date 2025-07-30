@@ -8,7 +8,8 @@ class ServiciosSnacks:
     def __init__(self):
         self.snacks = []
         # Revisar si existe el archivo snacks
-        if os.path.isfile(self.NOMBRE_ARCHIVO):
+        if os.path.isfile(
+                self.NOMBRE_ARCHIVO):  # mediante os.path.isfile() pasamos el nombre del archivo para saber si ya existe
             # Si existe, obtenemos los snacks del archivo
             self.snacks = self.obtener_snacks()
         # sino, cargamos algunos snacks iniciales
@@ -21,8 +22,8 @@ class ServiciosSnacks:
             Snack('Refresco', 50),
             Snack('Sandwich', 120)
         ]
-        self.snacks.extend(snaks_iniciales)
-        self.guardar_snacks_archivo(snaks_iniciales)
+        self.snacks.extend(snaks_iniciales)  # Anexamos los snacks iniciales
+        self.guardar_snacks_archivo(snaks_iniciales)  # Guardamos los snack iniciales
 
     def guardar_snacks_archivo(self, snacks):
         try:
@@ -37,7 +38,8 @@ class ServiciosSnacks:
         try:
             with open(self.NOMBRE_ARCHIVO, 'r') as archivo:
                 for linea in archivo:
-                    id_snack, nombre, precio = linea.strip().split(',')
+                    id_snack, nombre, precio = linea.strip().split(
+                        ',')  # Eliminanos los espacios y separamos con comas .split(',')
                     snack = Snack(nombre, float(precio))
                     snack.id_snack = int(id_snack)
                     snacks.append(snack)
