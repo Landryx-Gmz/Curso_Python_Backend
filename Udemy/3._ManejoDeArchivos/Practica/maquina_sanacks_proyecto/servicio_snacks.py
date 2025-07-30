@@ -52,6 +52,7 @@ class ServiciosSnacks:
         self.guardar_snacks_archivo([snack])
 
     def mostrar_snacks(self):
+        print('---Snack en el inventario---')
         for snack in self.snacks:
             print(snack)
 
