@@ -1,6 +1,7 @@
 from servicio_snacks import ServiciosSnacks
 from snack import Snack
 
+
 class MaquinaSnacks:
     def __init__(self):
         self.servicio_snacks = ServiciosSnacks()
@@ -13,7 +14,8 @@ class MaquinaSnacks:
         while not salir:
             try:
                 opcion = self.mostrar_menu()
-                salir = self.ejecutar_opcion(opcion)
+                salir = self.ejecutar_opcion(
+                    opcion)  # si el usuario ejecuta la opcion de salir salir = True y saldra del menu caso contrario permancera en el
             except Exception as e:
                 print(f'Ocurrio un error: {e}')
 
@@ -55,7 +57,7 @@ class MaquinaSnacks:
 
     def mostrar_ticket(self):
         if not self.productos:
-            print('No hay snacks en el tiket ')
+            print('No hay snacks en el tiket')
             return
         total = sum(snack.precio for snack in self.productos)
         print('----Ticket de venta----')
