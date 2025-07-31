@@ -2,26 +2,28 @@ import os
 
 
 class ServicioPeliculas:
-    nombre_archivo = 'peliculas.txt'
 
     def __init__(self):
-        self.peliculas = []
+        self.nombre_archivo = 'peliculas.txt'
 
     def agregar_pelicula(self):
         pelicula_agregada = input('Dime que pelicula quieres agrear: ')
+        try:
+            with open(self.nombre_archivo, 'a', encoding='utf8') as archivo:
+                archivo.write(f'{pelicula_agregada}\n')
+                print('Pelicula agregada correctamente')
+        except Exception as e:
+            print(f'Error al agregar la pelicula {e}')
 
-        self.peliculas.append(pelicula_agregada)
-        print('Pelicula agregada correctamente')
-
-    def agregar_peli_archivo(self):
-        pass
-
-    def listar_pelicula(self):
+    def listar_peliculas(self):
         print('*** Listado de peliculas ***')
-        if self.peliculas:  # Verifica si la lista contiene elementos
-            for pelicula in self.peliculas:
-                print(pelicula)
-        else:
+        try:
+            with open(self.nombre_archivo, 'r', encoding='utf8') as archivo:
+                if os.path.exists(self.nombre_archivo):  # Verifica si la lista contiene elementos
+                    for pelicula in archivo:
+                        print(pelicula.strip())
+        except Exception as e:
+            print(f'Error {e}')
             print('No hay peliculas por favor cree alguna pelicula')
 
     def eliminar_peliculas(self):

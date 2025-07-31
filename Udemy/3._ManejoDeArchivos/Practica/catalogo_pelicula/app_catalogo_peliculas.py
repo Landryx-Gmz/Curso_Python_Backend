@@ -31,7 +31,7 @@ class AppCatalogoPeliculas:
         if opcion == 1:
             self.servicio_peliculas.agregar_pelicula()
         elif opcion == 2:
-            self.servicio_peliculas.listar_pelicula()
+            self.servicio_peliculas.listar_peliculas()
         elif opcion == 3:
             self.servicio_peliculas.eliminar_peliculas()
         elif opcion == 4:
